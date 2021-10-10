@@ -45,6 +45,7 @@ html {
 .main__section4--heading {
   font-size: 3.5rem;
   color: white;
+  font-family: "Akronim", cursive;
 }
 
 .card__header {
@@ -316,13 +317,6 @@ html {
     min-height: 100vh;
   }
 
-  .article1__heading,
-.main__section2--heading,
-.main__section3--heading,
-.main__section4--heading {
-    font-size: 3rem;
-  }
-
   .card__header {
     font-size: 2rem;
   }
@@ -357,16 +351,13 @@ html {
     min-height: auto;
   }
 
-  .article1__heading,
-.main__section2--heading,
-.main__section3--heading,
-.main__section4--heading {
-    font-size: 1.5rem;
-  }
-
   .card__header {
     font-size: 1.5rem;
     margin-bottom: 0.1rem;
+  }
+
+  .main__section3__content {
+    box-shadow: 0.00001rem 0.01rem 0.00001rem #ADBA77;
   }
 
   .article1__description,
@@ -389,9 +380,18 @@ html {
   #main__section2 .main__section2__card--container {
     flex-direction: column;
   }
+  #main__section2 .main__section2__card--container .card__btn {
+    font-size: 1rem;
+    padding: 0.2rem;
+  }
 
   #main__section3 .main__section3--container {
     flex-direction: column;
+  }
+  #main__section3 .main__section3__content--btn {
+    color: #fff;
+    font-size: 1rem;
+    padding: 0.1rem;
   }
 
   #main__section4 .main__section4--form {
@@ -410,55 +410,6 @@ html {
   #main__section2,
 #main__section3 {
     min-height: auto;
-  }
-
-  .article1__heading,
-.main__section2--heading,
-.main__section3--heading,
-.main__section4--heading {
-    font-size: 1.5rem;
-  }
-
-  .card__header {
-    font-size: 1.5rem;
-    margin-bottom: 0.1rem;
-  }
-
-  .article1__description,
-.card__description,
-.main__section3__content-description {
-    text-align: justify;
-    font-size: 1rem;
-  }
-
-  #main__section1 {
-    flex-direction: column-reverse;
-    min-height: auto;
-    padding: 2rem;
-    justify-content: flex-start;
-  }
-  #main__section1 .article1__aside svg {
-    height: 20rem;
-  }
-
-  #main__section2 .main__section2__card--container {
-    flex-direction: column;
-  }
-
-  #main__section3 .main__section3--container {
-    flex-direction: column;
-  }
-
-  #main__section4 .main__section4--form {
-    max-width: 100%;
-  }
-  #main__section4 .main__section4--form input,
-#main__section4 .main__section4--form textarea {
-    max-width: 100%;
-  }
-
-  footer {
-    flex-direction: column;
   }
 }
 /* media query----------ends here */

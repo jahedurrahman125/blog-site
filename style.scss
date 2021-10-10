@@ -44,6 +44,7 @@
     .main__section4--heading {
         font-size: 3.5rem;
         color: white;
+        font-family: 'Akronim', cursive;
     }
     
     .card__header {
@@ -303,12 +304,6 @@
         #main__section3 {
             min-height: 100vh;
         }
-        .article1__heading,
-        .main__section2--heading,
-        .main__section3--heading,
-        .main__section4--heading {
-            font-size: 3rem;
-        }
         .card__header {
             font-size: f.$font-md;
         }
@@ -341,15 +336,12 @@
         #main__section4 {
             min-height: auto;
         }
-        .article1__heading,
-        .main__section2--heading,
-        .main__section3--heading,
-        .main__section4--heading {
-            font-size: 1.5rem;
-        }
         .card__header {
             font-size: f.$font-xs;
             margin-bottom: .1rem;
+        }
+        .main__section3__content {
+            box-shadow: 0.00001rem .01rem 0.00001rem #ADBA77;
         }
         .article1__description,
         .card__description,
@@ -369,11 +361,22 @@
         #main__section2 {
             .main__section2__card--container {
                 flex-direction: column;
+                .card__btn {
+                    font-size: f.$font-init;
+                    padding: 0.2rem;
+                }
             }
         }
         #main__section3 {
             .main__section3--container {
                 flex-direction: column;
+            }
+            .main__section3__content {
+                &--btn {
+                    color: #fff;
+                    font-size: f.$font-init;
+                    padding: 0.1rem;
+                }
             }
         }
         #main__section4 {
@@ -394,53 +397,6 @@
         #main__section2,
         #main__section3 {
             min-height: auto;
-        }
-        .article1__heading,
-        .main__section2--heading,
-        .main__section3--heading,
-        .main__section4--heading {
-            font-size: 1.5rem;
-        }
-        .card__header {
-            font-size: f.$font-xs;
-            margin-bottom: .1rem;
-        }
-        .article1__description,
-        .card__description,
-        .main__section3__content-description {
-            text-align: justify;
-            font-size: f.$font-init;
-        }
-        #main__section1 {
-            flex-direction: column-reverse;
-            min-height: auto;
-            padding: 2rem;
-            justify-content: flex-start;
-            .article1__aside svg {
-                height: 20rem;
-            }
-        }
-        #main__section2 {
-            .main__section2__card--container {
-                flex-direction: column;
-            }
-        }
-        #main__section3 {
-            .main__section3--container {
-                flex-direction: column;
-            }
-        }
-        #main__section4 {
-            .main__section4--form {
-                max-width: 100%;
-                input,
-                textarea {
-                    max-width: 100%;
-                }
-            }
-        }
-        footer {
-            flex-direction: column;
         }
     }
     /* media query----------ends here */
