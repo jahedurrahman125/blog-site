@@ -1,0 +1,446 @@
+    /* External pages used --start */
+    
+    @use 'abstract/color' as c;
+    @use 'abstract/mixins' as *;
+    @use 'abstract/font' as f;
+    @use 'abstract/variables' as v;
+    /*  */
+    /* External pages used---ends */
+    /* root reset code ---start*/
+    
+    * {
+        @include root;
+    }
+    
+    html {
+        @include html;
+    }
+    /* root reset code ---ends*/
+    /* Header starts here */
+    
+    #header {
+        @include display-control;
+        @include justify-cont;
+        padding: f.$font-init;
+        background-color: c.$bg-color;
+        min-height: v.$bar-height;
+        color: c.$w-color;
+        .icon {
+            font-size: f.$font-md;
+        }
+        .header__nav--link {
+            font-size: f.$font-sm;
+            color: c.$w-color;
+            display: inline-block;
+            margin-right: f.$font-md;
+        }
+    }
+    /* Header ends here */
+    /* common heading styles start*/
+    
+    .article1__heading,
+    .main__section2--heading,
+    .main__section3--heading,
+    .main__section4--heading {
+        font-size: 3.5rem;
+        color: white;
+    }
+    
+    .card__header {
+        font-size: f.$font-lg;
+        margin-bottom: f.$font-md;
+        color: rgb(248, 236, 236);
+    }
+    
+    .article1__description,
+    .card__description,
+    .main__section3__content-description {
+        text-align: justify;
+        font-size: f.$font-sm;
+        color: rgb(218, 211, 211);
+        margin-bottom: .8rem;
+    }
+    /* common heading styles ends*/
+    /* section 1 Home start here */
+    
+    #main__section1 {
+        background: #444;
+        @include display-control;
+        padding: 4rem;
+        height: v.$body-height;
+        justify-content: center;
+        .main__section1__article1 {
+            flex-basis: 50%;
+        }
+        .article1__aside {
+            flex-basis: 50%;
+            svg {
+                width: 100%;
+                #football {
+                    animation: niceball 2s infinite linear;
+                    @include animation-from-orgin;
+                }
+                @keyframes niceball {
+                    from {
+                        transform: translateY(0)rotateZ(0deg);
+                    }
+                    to {
+                        transform: translateY(43px)rotateZ(360deg);
+                    }
+                }
+                #foot {
+                    animation: knee 2s infinite linear;
+                    @include animation-from-orgin;
+                }
+                @keyframes knee {
+                    from {
+                        transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(10px)skewY(-13deg);
+                    }
+                }
+                #footballer {
+                    animation: manbody 2s infinite linear;
+                    @include animation-from-orgin;
+                }
+                @keyframes manbody {
+                    from {
+                        transform: translateX(0);
+                    }
+                    to {
+                        transform: translateX(-10px)skewY(-7deg);
+                    }
+                }
+            }
+        }
+    }
+    /* section 1 Home ends here */
+    /* section 2 About starts here */
+    
+    #main__section2 {
+        background: #333;
+        @include display-control;
+        flex-direction: column;
+        justify-content: space-evenly;
+        padding: 1rem;
+        width: 100%;
+        height: v.$full-height;
+        .main__section2__card--container {
+            @include display-control;
+            .card {
+                flex: 1;
+                padding: f.$font-init;
+                box-shadow: v.$box-shadow-right, v.$box-shadow-left;
+                margin: f.$font-init;
+                @include display-control;
+                align-items: flex-start;
+                flex-direction: column;
+                &__btn {
+                    align-self: center;
+                    background-color: c.$btn-color;
+                    border: none;
+                    box-shadow: v.$box-shadow-right;
+                    color: #fff;
+                    font-size: f.$font-sm;
+                    width: 80%;
+                    letter-spacing: 0.1rem;
+                    border-radius: 0.6rem;
+                    padding: 0.8rem;
+                }
+            }
+        }
+        .main__section2__tech--container {
+            width: 100%;
+            @include display-control;
+            justify-content: space-evenly;
+            .section2__btn {
+                flex-direction: column-reverse;
+                border: none;
+                padding: 1rem;
+                border-radius: 0.6rem;
+                font-size: f.$font-lg;
+                color: c.$w-color;
+                background-color: c.$btn-color;
+                transition: translate .1s;
+                animation: icons 5s infinite linear;
+            }
+            @keyframes icons {
+                from {
+                    transform: translateX(-.1rem)skewY(5deg);
+                }
+                to {
+                    transform: translateX(1rem)skewY(-5deg);
+                }
+            }
+        }
+    }
+    /* section 2 About ends here */
+    /* section 3 blog posts start here */
+    
+    #main__section3 {
+        background: #222;
+        padding: f.$font-init;
+        min-height: v.$full-height;
+        @include display-control;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .main__section3--container {
+            display: flex;
+            margin: 1rem 0;
+            box-shadow: v.$box-shadow-right;
+            .main__section3--aside {
+                flex-basis: 20%;
+                @include display-control;
+                justify-content: center;
+                .main__section3__aside--img {
+                    width: 70%;
+                    padding: .3rem;
+                    background-color: #ADBA77;
+                }
+            }
+            .main__section3__content {
+                padding: f.$font-init;
+                flex-basis: 70%;
+                margin-left: f.$font-md;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-evenly;
+                .main__section3__content--heading {
+                    font-size: f.$font-md;
+                }
+                .main__section3__content--btn {
+                    width: 30%;
+                    padding: .4rem 0;
+                    border: none;
+                    border-radius: 0.6rem;
+                    font-size: f.$font-sm;
+                    background-color: c.$btn-color;
+                }
+            }
+        }
+    }
+    /* section 3 blog post ends here  */
+    /* section 4 contact page start here */
+    
+    #main__section4 {
+        background: #333;
+        padding: f.$font-init;
+        min-height: v.$body-height;
+        @include display-control;
+        flex-direction: column;
+        justify-content: space-evenly;
+        .main__section4--form {
+            padding: f.$font-init;
+            box-shadow: v.$box-shadow-right, v.$box-shadow-left;
+            margin: f.$font-init;
+            display: flex;
+            flex-direction: column;
+            background-color: #ADBA77;
+            .form-field {
+                margin-bottom: f.$font-xs;
+            }
+            input,
+            textarea {
+                font-size: f.$font-sm;
+                padding: 2rem 1rem;
+                width: 40rem;
+                border: none;
+                border-radius: 0.6rem;
+            }
+            textarea {
+                height: 12vh;
+                resize: none;
+            }
+            .form-btn-field {
+                display: flex;
+                justify-content: flex-end;
+            }
+            .form-btn {
+                width: 30%;
+                padding: 1rem 0;
+                border: none;
+                border-radius: 0.6rem;
+                font-size: f.$font-sm;
+                background-color: c.$btn-color;
+            }
+        }
+    }
+    /* section 4 contact page end here */
+    /* page footer start here */
+    
+    #footer {
+        padding: f.$font-init;
+        height: 10vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background: c.$bg-color;
+        ;
+    }
+    
+    .footer__text {
+        color: c.$w-color;
+        font-size: f.$font-xs;
+    }
+    
+    .footer__nav__link,
+    .footer__nav__link a,
+    .footer__text a {
+        font-size: f.$font-xs;
+        color: c.$w-color;
+        padding: .6rem;
+    }
+    /* page footer ends here */
+    /* media query----------start here */
+    
+    @media screen and (max-width: v.$tablet) {
+        #main__section1,
+        #main__section4 {
+            min-height: 90vh;
+        }
+        #main__section2,
+        #main__section3 {
+            min-height: 100vh;
+        }
+        .article1__heading,
+        .main__section2--heading,
+        .main__section3--heading,
+        .main__section4--heading {
+            font-size: 3rem;
+        }
+        .card__header {
+            font-size: f.$font-md;
+        }
+        .article1__description,
+        .card__description,
+        .main__section3__content-description {
+            text-align: justify;
+            font-size: f.$font-init;
+        }
+    }
+    
+    @media screen and (max-width: v.$mobile) {
+        #header {
+            justify-content: start;
+            padding: 2rem;
+            .icon {
+                display: none;
+            }
+            .header__nav--link {
+                border: .1rem solid yellowgreen;
+                width: 100%;
+                justify-content: start;
+                display: block;
+                float: none;
+            }
+        }
+        #main__section1,
+        #main__section2,
+        #main__section3,
+        #main__section4 {
+            min-height: auto;
+        }
+        .article1__heading,
+        .main__section2--heading,
+        .main__section3--heading,
+        .main__section4--heading {
+            font-size: 1.5rem;
+        }
+        .card__header {
+            font-size: f.$font-xs;
+            margin-bottom: .1rem;
+        }
+        .article1__description,
+        .card__description,
+        .main__section3__content-description {
+            text-align: justify;
+            font-size: f.$font-init;
+        }
+        #main__section1 {
+            flex-direction: column-reverse;
+            min-height: auto;
+            padding: 2rem;
+            justify-content: flex-start;
+            .article1__aside svg {
+                height: 20rem;
+            }
+        }
+        #main__section2 {
+            .main__section2__card--container {
+                flex-direction: column;
+            }
+        }
+        #main__section3 {
+            .main__section3--container {
+                flex-direction: column;
+            }
+        }
+        #main__section4 {
+            .main__section4--form {
+                max-width: 100%;
+                input,
+                textarea {
+                    max-width: 100%;
+                }
+            }
+        }
+        footer {
+            flex-direction: column;
+        }
+    }
+    
+    @media screen and (max-width: 425px) {
+        #main__section2,
+        #main__section3 {
+            min-height: auto;
+        }
+        .article1__heading,
+        .main__section2--heading,
+        .main__section3--heading,
+        .main__section4--heading {
+            font-size: 1.5rem;
+        }
+        .card__header {
+            font-size: f.$font-xs;
+            margin-bottom: .1rem;
+        }
+        .article1__description,
+        .card__description,
+        .main__section3__content-description {
+            text-align: justify;
+            font-size: f.$font-init;
+        }
+        #main__section1 {
+            flex-direction: column-reverse;
+            min-height: auto;
+            padding: 2rem;
+            justify-content: flex-start;
+            .article1__aside svg {
+                height: 20rem;
+            }
+        }
+        #main__section2 {
+            .main__section2__card--container {
+                flex-direction: column;
+            }
+        }
+        #main__section3 {
+            .main__section3--container {
+                flex-direction: column;
+            }
+        }
+        #main__section4 {
+            .main__section4--form {
+                max-width: 100%;
+                input,
+                textarea {
+                    max-width: 100%;
+                }
+            }
+        }
+        footer {
+            flex-direction: column;
+        }
+    }
+    /* media query----------ends here */

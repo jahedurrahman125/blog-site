@@ -1,0 +1,33 @@
+// _common.scss
+@use './font' as f;
+@mixin root {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+}
+
+@mixin html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+@mixin section-heading {
+    text-align: center;
+    font-size: f.$section-heading;
+}
+
+@mixin animation-from-orgin {
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+@mixin display-control {
+    display: flex;
+    align-items: center;
+}
+
+@mixin justify-cont {
+    justify-content: space-between;
+}

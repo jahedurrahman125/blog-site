@@ -1,0 +1,13 @@
+@use './color' as c;
+$bar-height: 10vh;
+$body-height: 90vh;
+$full-height: 100vh;
+$box-shadow-right: 0.1rem 0.1rem 0.1rem c.$shadow-color;
+$box-shadow-left: -0.1rem 0rem 0.1rem c.$shadow-color;
+
+/* media size */
+
+$desktop: 1200px;
+$laptop: 1024px;
+$tablet: 768px;
+$mobile: 600px;
